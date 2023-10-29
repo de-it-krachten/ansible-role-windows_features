@@ -1,0 +1,25 @@
+---
+
+- name: Assertions
+  ansible.builtin.assert:
+    that:
+      - windows_features is defined
+
+- name: Install windows features
+  ansible.windows.win_feature:
+    name: "{{ windows_features.name }}"
+    state: "{{ windows_features.state | default('present') }}"
+    include_management_tools: "{{ windows_features.name.include_management_tools | default(omit) }}"
+    include_sub_features: "{{ windows_features.include_sub_features | default(omit) }}"
+    source: "{{ windows_features.source | default(omit) }}"
+  register: __win_features
+
+- name: Show new features installed
+  ansible.builtin.debug:
+    msg: "{{ __win_features.feature_result | json_query('[].display_name') }}"
+
+- name: Reboot if required
+  ansible.windows.win_reboot:
+  when:
+    - __win_features.reboot_required
+    - not windows_features_skip_reboot | bool
