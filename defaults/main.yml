@@ -1,0 +1,11 @@
+---
+
+## List of Windows features to install
+# windows_features:
+#   name:
+#     - AD-domain-services
+#   include_management_tools: true
+#   include_sub_features: true
+
+# Skip required reboot
+windows_features_skip_reboot: false

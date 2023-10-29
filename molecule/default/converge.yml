@@ -1,0 +1,11 @@
+---
+
+- name: Converge
+  hosts: all
+  become: "yes"
+  vars:
+    windows_features: {'name': ['AD-domain-services'], 'include_management_tools': True, 'include_sub_features': True}
+  tasks:
+    - name: Include role 'ansible-role-windows_features'
+      ansible.builtin.include_role:
+        name: ansible-role-windows_features
