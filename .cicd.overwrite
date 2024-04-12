@@ -5,7 +5,7 @@ generic:
   role: ansible-role-windows_features
   role_short: windows_features
   role_description: |
-    <basic role description>
+    Installs Windows features
   collections: []
 
 # Dependencies

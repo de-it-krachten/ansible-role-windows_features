@@ -3,7 +3,7 @@
 
 # ansible-role-windows_features
 
-<basic role description>
+Installs Windows features
 
 
 
@@ -13,7 +13,6 @@
 None
 
 #### Collections
-- community.general
 - ansible.windows
 - ansible.windows
 
@@ -21,10 +20,10 @@ None
 
 Supported platforms
 
-- Windows 2012 R2<sup>1</sup>
-- Windows 2016<sup>1</sup>
-- Windows 2019<sup>1</sup>
-- Windows 2022<sup>1</sup>
+- Windows Server 2012 R2<sup>1</sup>
+- Windows Server 2016<sup>1</sup>
+- Windows Server 2019<sup>1</sup>
+- Windows Server 2022<sup>1</sup>
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
