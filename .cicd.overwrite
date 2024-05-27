@@ -111,10 +111,9 @@ molecule:
   converge:
     vars:
       windows_features:
-        name:
-          - AD-domain-services
-        include_management_tools: true
-        include_sub_features: true
+        - name: D-domain-services
+          include_management_tools: true
+          include_sub_features: true
 
 # Github
 github:

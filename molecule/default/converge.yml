@@ -4,7 +4,7 @@
   hosts: all
   become: "yes"
   vars:
-    windows_features: {'name': ['AD-domain-services'], 'include_management_tools': True, 'include_sub_features': True}
+    windows_features: [{'name': 'D-domain-services', 'include_management_tools': True, 'include_sub_features': True}]
   tasks:
     - name: Include role 'ansible-role-windows_features'
       ansible.builtin.include_role:
