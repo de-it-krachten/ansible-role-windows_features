@@ -12,9 +12,6 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - jammy
-    - name: Fedora
-      versions:
-        - all
     - name: Windows
       versions:
         - all
