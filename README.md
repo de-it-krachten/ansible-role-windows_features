@@ -20,6 +20,7 @@ None
 
 Supported platforms
 
+- Ubuntu 24.04 LTS
 - Windows Server 2012 R2<sup>1</sup>
 - Windows Server 2016<sup>1</sup>
 - Windows Server 2019<sup>1</sup>
@@ -33,10 +34,9 @@ Note:
 <pre><code>
 ## List of Windows features to install
 # windows_features:
-#   name:
-#     - AD-domain-services
-#   include_management_tools: true
-#   include_sub_features: true
+#   - name: AD-domain-services
+#     include_management_tools: true
+#     include_sub_features: true
 
 # Skip required reboot
 windows_features_skip_reboot: false
@@ -53,10 +53,9 @@ windows_features_skip_reboot: false
   become: 'yes'
   vars:
     windows_features:
-      name:
-        - AD-domain-services
-      include_management_tools: true
-      include_sub_features: true
+      - name: D-domain-services
+        include_management_tools: true
+        include_sub_features: true
   tasks:
     - name: Include role 'windows_features'
       ansible.builtin.include_role:
