@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/de-it-krachten/ansible-role-windows_features/compare/v1.1.0...v1.2.0) (2024-12-29)
+
+
+### Features
+
+* Update supported platforms & CI ([faca0a4](https://github.com/de-it-krachten/ansible-role-windows_features/commit/faca0a433d54675246afbb758db3df31959f3188))
+
 # [1.1.0](https://github.com/de-it-krachten/ansible-role-windows_features/compare/v1.0.0...v1.1.0) (2024-06-03)
 
 
