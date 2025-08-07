@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-windows_features/compare/v1.2.0...v1.3.0) (2025-08-07)
+
+
+### Features
+
+* Add support for Windows Server 2025 ([32a8a28](https://github.com/de-it-krachten/ansible-role-windows_features/commit/32a8a2826d7ac813088895097d1c10ebc7792de0))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-windows_features/compare/v1.1.0...v1.2.0) (2024-12-29)
 
 
