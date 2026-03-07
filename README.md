@@ -14,7 +14,6 @@ None
 
 #### Collections
 - ansible.windows
-- ansible.windows
 
 ## Platforms
 
@@ -28,6 +27,7 @@ Supported platforms
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
+
 
 ## Role Variables
 ### defaults/main.yml
@@ -52,6 +52,7 @@ windows_features_skip_reboot: false
   hosts: all
   become: 'yes'
   vars:
+    molecule_driver: '{{ lookup(''env'', ''MOLECULE_DRIVER_NAME'') }}'
     windows_features:
       - name: D-domain-services
         include_management_tools: true

@@ -4,6 +4,7 @@
   hosts: all
   become: "yes"
   vars:
+    molecule_driver: "{{ lookup('env', 'MOLECULE_DRIVER_NAME') }}"
     windows_features: [{'name': 'D-domain-services', 'include_management_tools': True, 'include_sub_features': True}]
   tasks:
     - name: Include role 'ansible-role-windows_features'
